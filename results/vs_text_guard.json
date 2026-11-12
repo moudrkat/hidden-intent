@@ -1,0 +1,98 @@
+{
+ "guards": {
+  "Qwen/Qwen3Guard-Gen-0.6B": {
+   "cs/Unsafe": {
+    "missed": 0.2863247863247863,
+    "fp_hardneg": 0.34,
+    "fp_normal": 0.006666666666666667
+   },
+   "cs/Unsafe+Controversial": {
+    "missed": 0.17521367521367526,
+    "fp_hardneg": 0.7,
+    "fp_normal": 0.016666666666666666
+   },
+   "en/Unsafe": {
+    "missed": 0.45299145299145294,
+    "fp_hardneg": 0.06666666666666667,
+    "fp_normal": 0.0
+   },
+   "en/Unsafe+Controversial": {
+    "missed": 0.30341880341880345,
+    "fp_hardneg": 0.15333333333333332,
+    "fp_normal": 0.003355704697986577
+   },
+   "multi/Unsafe": {
+    "missed": 0.8333333333333334,
+    "fp_hardneg": 0.0,
+    "fp_normal": 0.0
+   },
+   "multi/Unsafe+Controversial": {
+    "missed": 0.7412280701754386,
+    "fp_hardneg": 0.0,
+    "fp_normal": 0.0
+   },
+   "narr/Unsafe": {
+    "missed": 0.9444444444444444,
+    "fp_hardneg": 0.02,
+    "fp_normal": 0.03355704697986577
+   },
+   "narr/Unsafe+Controversial": {
+    "missed": 0.782051282051282,
+    "fp_hardneg": 0.10666666666666667,
+    "fp_normal": 0.07718120805369127
+   }
+  },
+  "Qwen/Qwen3Guard-Gen-4B": {
+   "cs/Unsafe": {
+    "missed": 0.5811965811965811,
+    "fp_hardneg": 0.07333333333333333,
+    "fp_normal": 0.0
+   },
+   "cs/Unsafe+Controversial": {
+    "missed": 0.2692307692307693,
+    "fp_hardneg": 0.66,
+    "fp_normal": 0.013333333333333334
+   },
+   "en/Unsafe": {
+    "missed": 0.5,
+    "fp_hardneg": 0.013333333333333334,
+    "fp_normal": 0.0
+   },
+   "en/Unsafe+Controversial": {
+    "missed": 0.3205128205128205,
+    "fp_hardneg": 0.18666666666666668,
+    "fp_normal": 0.006711409395973154
+   },
+   "multi/Unsafe": {
+    "missed": 0.9078947368421053,
+    "fp_hardneg": 0.0,
+    "fp_normal": 0.0
+   },
+   "multi/Unsafe+Controversial": {
+    "missed": 0.736842105263158,
+    "fp_hardneg": 0.0,
+    "fp_normal": 0.0
+   },
+   "narr/Unsafe": {
+    "missed": 0.9316239316239316,
+    "fp_hardneg": 0.0,
+    "fp_normal": 0.006711409395973154
+   },
+   "narr/Unsafe+Controversial": {
+    "missed": 0.7521367521367521,
+    "fp_hardneg": 0.12,
+    "fp_normal": 0.05704697986577181
+   }
+  }
+ },
+ "cost_ms": {
+  "Qwen/Qwen3Guard-Gen-0.6B": 107.10763049974048,
+  "Qwen/Qwen3Guard-Gen-4B": 173.02889200072968,
+  "coding model forward (paid anyway)": 11.705537001034827,
+  "probe on top of it": 0.012534249981399626
+ },
+ "unparsed": {
+  "Qwen/Qwen3Guard-Gen-0.6B": 0,
+  "Qwen/Qwen3Guard-Gen-4B": 0
+ }
+}

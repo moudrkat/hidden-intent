@@ -1,0 +1,29 @@
+{
+ "threshold": 0.19210476666688464,
+ "set_on": "val, English normal requests, 1.0% flagged",
+ "system": null,
+ "test": {
+  "en": {
+   "caught": 1.0,
+   "fp_normal": 0.016778523489932886,
+   "fp_hardneg": 0.02,
+   "auc": 0.9998565938163254,
+   "n": {
+    "attack": 234,
+    "normal": 298,
+    "hardneg": 150
+   }
+  },
+  "cs": {
+   "caught": 0.9871794871794872,
+   "fp_normal": 0.02,
+   "fp_hardneg": 0.04666666666666667,
+   "auc": 0.9990455840455841,
+   "n": {
+    "attack": 234,
+    "normal": 300,
+    "hardneg": 150
+   }
+  }
+ }
+}
