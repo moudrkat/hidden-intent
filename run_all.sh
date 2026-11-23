@@ -6,7 +6,10 @@ export HIDDEN_INTENT_WORK="${HIDDEN_INTENT_WORK:-work}"
 sh pipeline/0_get_data.sh
 python pipeline/1_rewrite.py
 python pipeline/2_augment.py
-python pipeline/3_train.py --anthropic 1
+python pipeline/2b_scary_benign.py
+python pipeline/2c_short.py
+python pipeline/2d_filter_short.py
+python pipeline/3_train.py --anthropic 1 --data guard_data_aug3f.json --train-langs en,narr,cs,multi,scary,short
 python pipeline/4_export.py
 python pipeline/5_threshold.py
 python eval/keyword_filter.py

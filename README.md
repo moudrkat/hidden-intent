@@ -33,13 +33,20 @@ sh run_all.sh
 
 ## Results
 
-Missed attacks on the test split (the probe's threshold is set on the validation split):
+Missed attacks on the test split (threshold set on validation: 1 in 100 normal English requests flagged):
 
 | | English | Czech | story-like | in three steps | cost |
 |---|---|---|---|---|---|
-| this probe | 0 % | 5 % | 11 % | 12 % | 0.013 ms on top of the model's forward pass |
+| this probe | 0 % | 2 % | 5 % | 6 % | 0.013 ms on top of the model's forward pass |
 | a keyword list | 48 % | 79 % | | | |
 | Qwen3Guard-Gen-4B | 50 % | 58 % | 93 % | 91 % | 173 ms |
+
+False alarms of this probe: normal coding requests 0.7 %, benign requests that use security words
+("explain how ransomware works", "detect a keylogger in our logs") 4 %, one-sentence benign questions 12 %.
+The test topics never appear in training.
+
+The first version read words: it flagged 99 % of benign requests with security vocabulary. Steps `2b`–`2d`
+fixed that; [`results/versions.json`](results/versions.json) has the three versions side by side.
 
 Known limit: the probe averages over the whole message, so a short request after a long paste of code gets
 diluted. Read the user's own text, or use the Rolling Attention probe (trained by `pipeline/3_train.py`).
